@@ -1,0 +1,149 @@
+const mysql = require("mysql");
+  
+const connection = mysql.createConnection({
+  host: "127.0.0.1",
+  port:"3306",
+  user: "root",
+  password: "m086413o",
+  database:'passion'
+});
+
+conn.connect(function(err) {
+  if (err) throw err;
+  console.log('Database is connected successfully !');
+});
+
+module.exports = conn;
+
+
+
+
+
+const mysql = require("mysql");
+  
+const connection = mysql.createConnection({
+  host: "127.0.0.1",
+  port:"3306",
+  user: "root",
+  password: "m086413o",
+  database:'passion'
+});
+
+ connection.connect(function(err){
+    if (err) {
+      return console.error("Помилка: " + err.message);
+    }
+    else{
+      console.log("Підключено");
+    }
+ });
+
+ 
+ function sendToDb(){
+   var user = ["Olia", "olia12@gmail.com", "+380322639848","good place"];
+ var sql = "INSERT INTO feedback(name, gmail, telephone, message) VALUES(?, ?, ?, ?)";
+ connection.query(sql, user, function(err, results) {
+     if(err) console.log(err);
+     else console.log("Дані до бази даних додані");
+     connection.end(); 
+ }); 
+ }
+
+// function sendToDb(name, email, phone, message) {
+//   var user = [name, email, phone, message];
+//   var sql = "INSERT INTO feedback(name, gmail, telephone, message) VALUES(?, ?, ?, ?)";
+//   connection.query(sql, user, function(err, results) {
+//     if(err) console.log(err);
+//     else console.log("Data added to the database");
+//     connection.end(); 
+//   }); 
+// }
+
+
+
+<nav class="carousel__nav">
+          <ul>
+            <li>
+              <a href="#item-1" aria-label="Item 1">
+              <svg viewBox="0 0 10 10" width="1em">
+                <circle cx="5" cy="5" r="5" fill="#fff" />
+              </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#item-2" aria-label="Item 2">
+              <svg viewBox="0 0 10 10" width="1em">
+                <circle cx="5" cy="5" r="5" fill="#fff" />
+              </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#item-3" aria-label="Item 3">
+              <svg viewBox="0 0 10 10" width="1em">
+                <circle cx="5" cy="5" r="5" fill="#fff" />
+              </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#item-4" aria-label="Item 4">
+              <svg viewBox="0 0 10 10" width="1em">
+                <circle cx="5" cy="5" r="5" fill="#fff" />
+              </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#item-5" aria-label="Item 5">
+              <svg viewBox="0 0 10 10" width="1em">
+                <circle cx="5" cy="5" r="5" fill="#fff" />
+              </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#item-6" aria-label="Item 6">
+              <svg viewBox="0 0 10 10" width="1em">
+                <circle cx="5" cy="5" r="5" fill="#fff" />
+              </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#item-7" aria-label="Item 7">
+              <svg viewBox="0 0 10 10" width="1em">
+                <circle cx="5" cy="5" r="5" fill="#fff" />
+              </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#item-8" aria-label="Item 8">
+              <svg viewBox="0 0 10 10" width="1em">
+                <circle cx="5" cy="5" r="5" fill="#fff" />
+              </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#item-9" aria-label="Item 9">
+              <svg viewBox="0 0 10 10" width="1em">
+                <circle cx="5" cy="5" r="5" fill="#fff" />
+              </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#item-10" aria-label="Item 10">
+              <svg viewBox="0 0 10 10" width="1em">
+                <circle cx="5" cy="5" r="5" fill="#fff" />
+              </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#item-11" aria-label="Item 11">
+              <svg viewBox="0 0 10 10" width="1em">
+                <circle cx="5" cy="5" r="5" fill="#fff" />
+              </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+
+
+
+ 

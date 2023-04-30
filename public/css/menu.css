@@ -1,0 +1,205 @@
+.header:before{ 
+  content:""; 
+  width:100%; 
+  height:200%; 
+  position:absolute; 
+  top:0; 
+  left:0; 
+  -webkit-backface-visibility: hidden; 
+  -webkit-transform: translateZ(0); 
+  backface-visibility: hidden; 
+  transform: scale(1.0, 1.0); 
+  transform: translateZ(0); 
+  background:#1B2030 url("/assets/menu_header.jpg") 50% 0 no-repeat; 
+  background-attachment:fixed; 
+  animation: grow 200s  linear 10ms infinite; 
+  transition:all 0.4s ease-in-out; 
+  z-index:-2 ;
+  background-size:cover; /* Updated property to cover */
+} 
+.menu-links nav ul li{
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 10px;
+}
+.menu-links li{
+  z-index: 1;
+}
+
+/* Стиль контейнера сітки */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 стовпці */
+  gap: 20px; /* Проміжок між блоками */
+  margin: 5%;
+}
+
+/* Стиль окремого блоку сітки */
+.grid-item {
+  background-color: #ffffff; /* Колір фону */
+  padding: 20px; /* Внутрішні відступи */
+  display: grid; /* Застосовуємо grid контекст для .grid-item */
+  perspective: 1000px;
+  margin: 2% 2%;
+  position: relative; /* Додаємо позиціонування для внутрішніх елементів */
+}
+
+
+/* Стиль заголовку */
+.card-front h2 {
+  font-size: 24px;
+  margin-top: 2%;
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Стиль фото */
+.card-front img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+/* Стиль ціни */
+.card-front span {
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+/* Медіа-запит для зміни кількості стовпців при зменшенні ширини екрану */
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Для 2 елементів в рядку на екранах шириною від 481px до 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Для 3 елементів в рядку на екранах шириною від 769px до 1200px */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+#main-heading{
+  margin-top: 5%;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 0px 4px 10px rgba(255, 255, 255, 0.097);
+  color: #fff;
+  
+}
+body{
+  background-color: #1B2030;
+}
+.card-inner {
+  transition: transform 0.6s; /* Додаємо анімацію для зміни повороту */
+  transform-style: preserve-3d; /* Задаємо 3D-контекст */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 15px 15px;
+  text-align: center;
+  position: relative; /* Додаємо позиціонування */
+  height: 400px; /* Задаємо фіксовану висоту для контейнера */
+}
+
+.pasta .card-inner{
+  transition: transform 0.6s; /* Додаємо анімацію для зміни повороту */
+  transform-style: preserve-3d; /* Задаємо 3D-контекст */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 15px 15px;
+  text-align: center;
+  position: relative; /* Додаємо позиціонування */
+  height: 270px; /* Задаємо фіксовану висоту для контейнера */
+}
+.grid-item:hover .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back{
+  -webkit-backface-visibility: hidden;
+  backface-visibility:hidden;
+  position: absolute; /* Додаємо позиціонування для фронтальної і задньої сторінок */
+  top: 0; /* Встановлюємо верхній край на початкову позицію */
+  left: 0; /* Встановлюємо лівий край на початкову позицію */
+  right: 0; /* Встановлюємо правий край на початкову позицію */
+  bottom: 0; /* Встановлюємо нижній край на початкову позицію */
+}
+.card-back{
+  transform: rotateY(180deg);
+}
+.card-back{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  padding: 15px;
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.item-image {
+  background-size: cover;
+  background-position: center center;
+  height: 300px;
+}
+
+.item-info {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+}
+
+.item-info h3 {
+  margin: 0;
+  font-size: 1em;
+  margin-right: 5px;
+}
+
+.item-info p {
+  margin: 0;
+  font-size: 1em;
+  bottom: 0;
+}
+.gridItem:hover{
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.7);
+}
+
+.drinks .gridItem .item-info{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: absolute;
+  height: 15%;
+  width: 35%;
+  bottom: 0;
+  padding: 20px;
+}
+.drinks .item-info h3{
+  margin: 0;
+  font-size: 0.9em;
+}
+.drinks .item-info p{
+  margin: 0;
+  font-size: 0.8em;
+}

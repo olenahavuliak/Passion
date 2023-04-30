@@ -1,0 +1,120 @@
+.header:before{ 
+  content:""; 
+  width:100%; 
+  height:200%; 
+  position:absolute; 
+  top:0; 
+  left:0; 
+  -webkit-backface-visibility: hidden; 
+  -webkit-transform: translateZ(0); 
+  backface-visibility: hidden; 
+  transform: scale(1.0, 1.0); 
+  transform: translateZ(0); 
+  background:#1B2030 url("/assets/contact_header.jpg") 50% 0 no-repeat; 
+  background-size:100%; 
+  background-attachment:fixed; 
+  background-size: cover;
+  animation: grow 200s  linear 10ms infinite; 
+  transition:all 0.4s ease-in-out; 
+  z-index:-2 
+} 
+.header{ 
+  position:relative; 
+  overflow:hidden; 
+  display:flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  align-items: center; 
+  align-content: center; 
+  height:800px; 
+  min-height:400px; 
+  max-height:900px; 
+  min-width:300px; 
+  color:#070000; 
+  justify-content: center;
+  align-items: center;
+} 
+.content{   
+  margin:10% 10%; 
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+  background-color: #1B2030;
+}
+
+.content h3, h1{
+  text-transform: uppercase;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+.content h1{
+  color: wheat;
+}
+#map {
+  height: 300px;
+  margin: auto;
+  z-index: 0;
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: antiquewhite;
+  padding: 20px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.feedback input[type="text"],
+.feedback input[type="email"],
+.feedback input[type="tel"],
+.feedback textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 40%;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.feedback button{
+  border-radius: 0;
+  padding: 10px 25px; 
+  background-color: rgb(68, 48, 18);
+  border-color: bisque;
+  color: bisque;
+}
+
+.kitchen-hours, .open-hours, .contact-media, .feedback, .location{
+  background-color: antiquewhite;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  margin-top: 50px;
+  border-color: #814100;
+  border-width: 3px;
+  border-style:groove;
+}
+
+.kitchen-hours:hover{
+  background-color: rgb(255, 245, 233);
+}
+.open-hours:hover{
+  background-color: rgb(255, 245, 233);
+}
+.contact-media:hover{
+  background-color: rgb(255, 245, 233);
+}
+.feedback:hover{
+  background-color: rgb(255, 245, 233);
+}
+.location:hover{
+  background-color: rgb(255, 245, 233);
+}

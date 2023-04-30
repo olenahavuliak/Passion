@@ -1,0 +1,101 @@
+.header:before{ 
+  content:""; 
+  width:100%; 
+  height:200%; 
+  position:absolute; 
+  top:0; 
+  left:0; 
+  -webkit-backface-visibility: hidden; 
+  -webkit-transform: translateZ(0); 
+  backface-visibility: hidden; 
+  transform: scale(1.0, 1.0); 
+  transform: translateZ(0); 
+  background:#1B2030 url("/assets/reserv-header.jpg") 100% 0 no-repeat; 
+  background-size:100%; 
+  background-attachment:fixed; 
+  background-size:cover;
+  z-index:-2 
+} 
+
+.header{ 
+  position:relative; 
+  overflow:hidden; 
+  display:flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  align-items: center; 
+  align-content: center; 
+  height:800px; 
+  min-height:400px; 
+  max-height:900px; 
+  min-width:300px; 
+  color:#eee; 
+  justify-content: center;
+  align-items: center;
+} 
+
+.content {
+  margin: 5% 20%;
+}
+body{
+  background-color: #1B2030;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  color: white;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 40px;
+}
+
+.reserv-form :hover{
+  box-shadow:  0px 2px 5px rgba(87, 139, 224, 0.525);
+  
+}
+label {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  padding-top: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  background-color: #1B2030;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: auto;
+ margin-right: 0;
+}
+
+
+button[type="submit"]:hover {
+  background-color: #ffffff;
+  color: #1B2030;
+}
+.content h2{
+  text-align: center;
+  text-shadow: 0px 2px 5px rgba(87, 139, 224, 0.525);
+  color: aliceblue;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+
+}

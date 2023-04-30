@@ -1,0 +1,86 @@
+
+.header:before{ 
+  content:""; 
+  width:100%; 
+  height:200%; 
+  position:absolute; 
+  top:0; 
+  left:0; 
+  -webkit-backface-visibility: hidden; 
+  -webkit-transform: translateZ(0); 
+  backface-visibility: hidden; 
+  transform: scale(1.0, 1.0); 
+  transform: translateZ(0); 
+  background:#1B2030 url("/assets/header.jpg") 100% 0 no-repeat; 
+  background-size:100%; 
+  background-attachment:fixed; 
+  background-size:cover;
+  animation: grow 200s  linear 10ms infinite; 
+  transition:all 0.4s ease-in-out; 
+  z-index:-2 
+} 
+body{
+  background-color: #1B2030;
+}
+
+.content{   
+  margin:10% 10%; 
+}
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(221, 231, 255);
+  width: 90%;
+  padding: 20px;
+  font-family:'Josefin Sans', sans-serif;
+  font-size: larger;
+  margin-top: 40px;
+  box-shadow: 10px 10px 5px rgb(180, 180, 180);
+} 
+.flex-item{
+  width: 45%;
+  text-align: center;
+  padding: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.flex-photo img{
+  width: 100%;
+}
+.flex-photo{
+  width: 40%;
+}
+.flex-item h2{
+  text-transform: uppercase;
+}
+.flex-item button{
+  background-color: rgb(141, 167, 214);
+  border-radius: 0;
+  padding: 30px;
+  margin: 10%;
+  text-decoration: none;
+  cursor: pointer;
+}
+a{
+  color: black;
+
+}
+.flex-item button:hover{
+  background-color: rgb(199, 217, 255);
+}
+.flex-item button:hover #button-arrow{
+  transform: translateX(5px);
+  transition: transform 0.2s ease-in-out;
+}
+.mainInfo{
+  text-align: center;
+  font-size:larger;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 5%;
+  text-shadow:  2px 2px 5px rgb(255, 255, 255);
+  color: aliceblue;
+}
+#button-arrow{
+  width: 20px;
+}
