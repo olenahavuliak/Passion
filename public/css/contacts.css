@@ -10,7 +10,6 @@
   backface-visibility: hidden; 
   transform: scale(1.0, 1.0); 
   transform: translateZ(0); 
-  background:#1B2030 url("./assets/contact_header.jpg") 50% 0 no-repeat; 
   background-size:100%; 
   background-attachment:fixed; 
   background-size: cover;
